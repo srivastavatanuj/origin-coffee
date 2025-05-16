@@ -5,14 +5,19 @@ import App from "./App.jsx";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
-      <Header />
-      <App />
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Header />
+        <App />
 
-      <Footer />
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
+    </QueryClientProvider>
   </StrictMode>
 );

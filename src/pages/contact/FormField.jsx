@@ -39,7 +39,7 @@ export function FormTextArea({
         {required && <span className="ml-1 opacity-70">(required)</span>}
       </label>
       <textarea
-        className="p-2.5 w-full rounded border border-solid resize-y bg-neutral-50 border-neutral-400 min-h-[100px]"
+        className="p-2.5 w-full rounded border border-solid resize-y bg-neutral-50 border-neutral-400 min-h-[100px] text-black"
         required={required}
         value={value}
         onChange={(e) => onChange(e.target.value)}
